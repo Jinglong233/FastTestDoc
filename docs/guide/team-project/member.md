@@ -35,14 +35,4 @@ FastTest 支持两级成员管理：团队级成员和项目级成员。
 
 角色本身不直接绑定用户，而是通过「用户授权」建立关系。
 
-## 相关接口
 
-| 接口 | 说明 |
-|------|------|
-| `REQ /team/members/{teamId}` | 团队成员列表 |
-| `REQ /team/addTeamMember` | 添加团队成员 |
-| `REQ /team/member/updateRole` | 修改团队成员角色 |
-| `REQ /team/member/remove` | 移除团队成员 |
-| `GET /project/member/list/{projectId}` | 项目成员列表 |
-| `POST /project/member/assign` | 分配项目角色 |
-| `POST /project/member/remove` | 移除项目成员 |

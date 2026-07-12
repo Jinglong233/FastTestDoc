@@ -28,16 +28,4 @@
 
 元素集中管理的优势在于：当页面元素定位发生变化时，只需在元素库中修改一次，所有引用该元素的场景自动生效。
 
-## 相关接口
 
-| 接口 | 说明 |
-|------|------|
-| `POST /element/pageElementList` | 元素列表 |
-| `POST /element/getElementList` | 元素下拉选项 |
-| `REQ /element/folderList` | 文件夹树 |
-| `Get /element/getElementById` | 元素详情 |
-| `Post /element/add` | 新增元素 |
-| `Post /element/update` | 更新元素 |
-| `Get /element/deleteElementOrFolder` | 删除元素/文件夹 |
-| `Post /element/deleteElementBatch` | 批量删除 |
-| `Post /element/updateElementSort` | 排序 |

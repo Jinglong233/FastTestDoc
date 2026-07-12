@@ -49,16 +49,4 @@
 此处需补充「响应示例面板」截图。
 :::
 
-## 相关接口
 
-| 接口 | 说明 |
-|------|------|
-| `REQ /interface/save` | 保存接口 |
-| `REQ /interface/saveCase` | 保存接口用例 |
-| `REQ /interface/folderList` | 目录列表 |
-| `REQ /interface/apiListTree` | 接口树 |
-| `REQ /interface/getApiById` | 接口详情 |
-| `REQ /interface/deleteApi` | 删除接口 |
-| `REQ /interface/copyApi` | 复制接口 |
-| `REQ /interface/updateApiSort` | 更新排序 |
-| `REQ /interface/importSwagger` | Swagger 导入 |

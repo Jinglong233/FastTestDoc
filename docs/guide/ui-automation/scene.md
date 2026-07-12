@@ -53,20 +53,4 @@ UI 场景支持多种步骤类型，常见包括：
 UI 场景和 API 场景的目录树相互隔离，同分类下才允许拖拽。
 :::
 
-## 相关接口
 
-| 接口 | 说明 |
-|------|------|
-| `POST /scene/addScene` | 新增场景 |
-| `POST /scene/updateScene` | 更新场景 |
-| `Get /scene/deleteFolderOrScene` | 删除场景/文件夹 |
-| `Get /scene/getSceneById` | 场景详情 |
-| `POST /scene/updateSceneSort` | 排序 |
-| `POST /scene/copyScene` | 复制场景 |
-| `Post /step/addStep` | 新增步骤 |
-| `Post /step/updateStep` | 更新步骤 |
-| `Get /step/deleteStep` | 删除步骤 |
-| `Post /step/updateStepSort` | 步骤排序 |
-| `Post /step/batchEnableStep` | 批量启用 |
-| `Post /step/batchDisableStep` | 批量禁用 |
-| `Post /step/batchDeleteStep` | 批量删除 |

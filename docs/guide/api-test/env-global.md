@@ -49,14 +49,4 @@
 - 环境查看/编辑/删除需要 `auto:env:view/update/delete` 权限
 - 全局变量查看/编辑/删除需要 `auto:globalvar:view/update/delete` 权限
 
-## 相关接口
 
-| 接口 | 说明 |
-|------|------|
-| `REQ /env/getEnvList` | 环境列表 |
-| `REQ /env/saveOrUpdate` | 保存/更新环境 |
-| `REQ /env/delete` | 删除环境 |
-| `REQ /env/copy` | 复制环境 |
-| `REQ /globalVar/getGlobalArgList` | 全局变量列表 |
-| `REQ /globalVar/saveOrUpdate` | 保存/更新全局变量 |
-| `REQ /globalVar/deleteById` | 删除全局变量 |

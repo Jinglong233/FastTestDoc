@@ -11,7 +11,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/what-is-fasttest' },
-      { text: '开发参考', link: '/guide/dev/api-reference' },
+      { text: '部署', link: '/guide/deploy' },
       { text: '更新日志', link: '/changelog' }
     ],
 
@@ -22,8 +22,16 @@ export default defineConfig({
           items: [
             { text: 'FastTest 是什么', link: '/guide/what-is-fasttest' },
             { text: '快速开始', link: '/guide/getting-started' },
+            { text: '生产部署', link: '/guide/deploy' },
             { text: '系统架构', link: '/guide/architecture' },
             { text: '核心概念', link: '/guide/concepts' }
+          ]
+        },
+        {
+          text: '自动化测试',
+          collapsed: false,
+          items: [
+            { text: '概览', link: '/guide/automation/' }
           ]
         },
         {
@@ -58,7 +66,8 @@ export default defineConfig({
             { text: '接口调试', link: '/guide/api-test/debug' },
             { text: 'Mock 响应', link: '/guide/api-test/mock' },
             { text: '环境与全局变量', link: '/guide/api-test/env-global' },
-            { text: '数据模板', link: '/guide/api-test/data-template' }
+            { text: '数据模板', link: '/guide/api-test/data-template' },
+            { text: 'Mock 与数据模板', link: '/guide/mock-template/' }
           ]
         },
         {
@@ -81,15 +90,7 @@ export default defineConfig({
             { text: '测试报告', link: '/guide/test-run/report' }
           ]
         },
-        {
-          text: '开发参考',
-          collapsed: false,
-          items: [
-            { text: 'API 接口速查', link: '/guide/dev/api-reference' },
-            { text: '权限码清单', link: '/guide/dev/permission-codes' },
-            { text: '逻辑删除与级联', link: '/guide/dev/logical-delete' }
-          ]
-        }
+
       ]
     },
 

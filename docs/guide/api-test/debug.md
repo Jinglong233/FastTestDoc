@@ -70,9 +70,4 @@ context.setVariable("userId", json.data.id);
 
 JSON/XML 请求体发送时，为避免 okhttp 自动追加 `; charset=utf-8` 导致服务端解析失败，后端使用 `RequestBody.create(MediaType, byte[])` 重载，原样发送 Content-Type。
 
-## 相关接口
 
-| 接口 | 说明 |
-|------|------|
-| `REQ /interface/debug` | 接口调试 |
-| `REQ /interface/debugByConfig` | 按配置调试 |
