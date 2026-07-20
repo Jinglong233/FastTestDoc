@@ -34,15 +34,4 @@
 
 每个用户默认拥有一个个人团队（`is_personal = true`），用于个人试用和私有项目。
 
-## 相关接口
 
-| 接口 | 说明 |
-|------|------|
-| `GET /team/getTeamList` | 获取当前用户所属团队 |
-| `POST /team/createTeam` | 创建团队 |
-| `POST /team/updateTeam` | 更新团队信息 |
-| `POST /team/deleteTeam/{teamId}` | 删除团队（逻辑删除） |
-| `REQ /team/members/{teamId}` | 查询团队成员 |
-| `REQ /team/addTeamMember` | 添加团队成员 |
-| `REQ /team/member/updateRole` | 修改成员角色 |
-| `REQ /team/member/remove` | 移除团队成员 |
