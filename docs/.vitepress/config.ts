@@ -54,11 +54,10 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '概览', link: '/guide/api-test/' },
-            { text: '接口管理', link: '/guide/api-test/api-manager' },
-            { text: '接口调试', link: '/guide/api-test/debug' },
-            { text: 'Mock 响应', link: '/guide/api-test/mock' },
-            { text: '环境与全局变量', link: '/guide/api-test/env-global' },
-            { text: '数据模板', link: '/guide/api-test/data-template' }
+            { text: 'API测试', link: '/guide/api-test/API测试使用文档' },
+            { text: 'API场景', link: '/guide/api-test/API场景使用文档' },
+            { text: '数据模板使用文档', link: '/guide/api-test/数据模板使用文档' },
+            { text: '环境管理使用文档', link: '/guide/api-test/环境管理使用文档' },
           ]
         },
         {
@@ -66,9 +65,9 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '概览', link: '/guide/ui-automation/' },
-            { text: '元素库', link: '/guide/ui-automation/element' },
-            { text: 'UI 场景编排', link: '/guide/ui-automation/scene' },
-            { text: '场景调试', link: '/guide/ui-automation/scene-debug' }
+            { text: 'UI场景使用文档', link: '/guide/ui-automation/UI场景使用文档' },
+            { text: '元素库使用文档', link: '/guide/ui-automation/元素库使用文档' },
+
           ]
         },
         {
