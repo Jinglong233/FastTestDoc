@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'FastTest 平台文档',
+  title: 'MokaTest 平台文档',
   description: 'FastTest 质量管理 & 自动化测试平台说明文档',
   lang: 'zh-CN',
   base: '/FastTestDoc/',
@@ -11,8 +11,6 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/what-is-fasttest' },
-      { text: '开发参考', link: '/guide/dev/api-reference' },
-      { text: '更新日志', link: '/changelog' }
     ],
 
     sidebar: {
@@ -20,7 +18,7 @@ export default defineConfig({
         {
           text: '开始',
           items: [
-            { text: 'FastTest 是什么', link: '/guide/what-is-fasttest' },
+            { text: 'MokaTest 是什么', link: '/guide/what-is-fasttest' },
             { text: '快速开始', link: '/guide/getting-started' },
             { text: '系统架构', link: '/guide/architecture' },
             { text: '核心概念', link: '/guide/concepts' }
@@ -56,8 +54,8 @@ export default defineConfig({
             { text: '概览', link: '/guide/api-test/' },
             { text: 'API测试', link: '/guide/api-test/API测试使用文档' },
             { text: 'API场景', link: '/guide/api-test/API场景使用文档' },
-            { text: '数据模板使用文档', link: '/guide/api-test/数据模板使用文档' },
-            { text: '环境管理使用文档', link: '/guide/api-test/环境管理使用文档' },
+            { text: '数据模板', link: '/guide/api-test/数据模板使用文档' },
+            { text: '环境管理', link: '/guide/api-test/环境管理使用文档' },
           ]
         },
         {
@@ -65,8 +63,8 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '概览', link: '/guide/ui-automation/' },
-            { text: 'UI场景使用文档', link: '/guide/ui-automation/UI场景使用文档' },
-            { text: '元素库使用文档', link: '/guide/ui-automation/元素库使用文档' },
+            { text: 'UI场景', link: '/guide/ui-automation/UI场景使用文档' },
+            { text: '元素库', link: '/guide/ui-automation/元素库使用文档' },
 
           ]
         },
@@ -80,25 +78,16 @@ export default defineConfig({
             { text: '测试报告', link: '/guide/test-run/report' }
           ]
         },
-        {
-          text: '开发参考',
-          collapsed: false,
-          items: [
-            { text: 'API 接口速查', link: '/guide/dev/api-reference' },
-            { text: '权限码清单', link: '/guide/dev/permission-codes' },
-            { text: '逻辑删除与级联', link: '/guide/dev/logical-delete' }
-          ]
-        }
       ]
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com' }
+      { icon: 'github', link: 'https://github.com/Jinglong233/MokaTest' }
     ],
 
     footer: {
       message: '基于 MIT 协议发布',
-      copyright: 'Copyright © 2026 FastTest Team'
+      copyright: 'Copyright © 2026 MokaTest Team'
     },
 
     search: {

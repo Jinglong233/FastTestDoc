@@ -1,2 +1,2 @@
-# FastTestDoc
-FastTest测试平台说明文档
+# MokaTestDoc
+MokaTest测试平台说明文档

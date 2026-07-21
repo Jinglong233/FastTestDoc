@@ -1,12 +1,7 @@
 # UI 场景使用文档
 
-> 面向使用者的操作指南。菜单位置：**UI 自动化 → UI 场景**。
-> UI 场景用真实浏览器（Playwright）回放页面操作，适合端到端业务流程测试。
-
----
-
 ## 一、页面布局
-
+![img.png](../../public/screenshots/ui-automation/ui-scene/img.png)![img_1.png](../../public/screenshots/ui-automation/ui-scene/img_1.png)
 - **左侧**：场景目录树（与 API 场景相互独立），支持搜索、右键新建、拖拽排序
 - **右侧**：步骤编排区，支持两种视图切换：
   - **列表模式**：步骤树（条件/循环步骤可展开子步骤）
@@ -16,6 +11,17 @@
 ---
 
 ## 二、场景配置
+
+<div style="display: flex; gap: 16px;">
+  <div style="flex: 1;">
+
+   ![img_2.png](../../public/screenshots/ui-automation/ui-scene/img_2.png)
+  </div>
+  <div style="flex: 1;">
+
+  ![img_3.png](../../public/screenshots/ui-automation/ui-scene/img_3.png)
+  </div>
+</div>
 
 点「场景配置」弹窗：
 
@@ -33,6 +39,7 @@
 
 ### 3.1 步骤类型一览
 
+![img_4.png](../../public/screenshots/ui-automation/ui-scene/img_4.png)
 | 分类 | 步骤 |
 |------|------|
 | 页面 | 打开页面、后退、前进、刷新、关闭页面、切换页签 |
@@ -52,10 +59,13 @@
 
 ### 3.3 变量
 
-- 提取步骤把页面/元素值存入变量，后续步骤用 `{{变量名}}` 引用
-- 输入值支持 `@函数()` 动态生成（如 `@phone()`、`@character('lower', 8)`）
+- 提取步骤把页面/元素值存入变量，后续步骤用 `双大括号语法` 引用 
 
----
+![img_5.png](../../public/screenshots/ui-automation/ui-scene/img_5.png)
+
+系统内置了一些常用函数供大家使用
+- 直接点击，就可以复制使用。
+
 
 ## 四、调试执行
 
@@ -90,38 +100,29 @@
 
 每个步骤执行后显示状态徽标，点开结果抽屉查看：执行状态、耗时、报错详情（Playwright 超时已翻译为友好文案）、**截图**、提取到的变量。循环步骤按轮次展示每轮结果。
 
----
-
 ## 五、录制导入
-
+![img_6.png](../../public/screenshots/ui-automation/ui-scene/img_6.png)
+![img_7.png](../../public/screenshots/ui-automation/ui-scene/img_7.png)
+![img_8.png](../../public/screenshots/ui-automation/ui-scene/img_8.png)
 支持导入浏览器录制插件生成的操作脚本（仓库根目录 `recorder-extension.zip` 为配套扩展），自动转换为场景步骤；录制产生的元素定位默认存为「自定义定位」，可一键「添加到元素管理」沉淀进元素库。
+> 注意：录制插件录制的操作，不能保证**百分百**可执行。导入场景之后，还需要手动调试！！！
 
 ---
 
-## 六、导入导出 / 计划任务
+## 六、导入导出
 
-- 场景可导出 JSON（剥离环境敏感字段）并导入其他项目
-- UI 场景可加入任务计划定时批量执行，结果汇总为测试报告；计划执行默认无头模式，支持登录态（storageState）复用
+### 导出
+![img_9.png](../../public/screenshots/ui-automation/ui-scene/img_9.png)
+- 场景可导出 JSON 并导入其他项目
 
----
+### 导入
+![img_10.png](../../public/screenshots/ui-automation/ui-scene/img_10.png)
 
-## 七、权限说明
+如果是同项目的场景，可以通过底部的【导入步骤】进行操作
+![img_11.png](../../public/screenshots/ui-automation/ui-scene/img_11.png)
 
-| 操作 | 所需权限 |
-|------|---------|
-| 查看场景/步骤 | auto:scene:view / auto:step:view |
-| 新建 | auto:scene:create / auto:step:create |
-| 编辑/排序/配置 | auto:scene:update / auto:step:update |
-| 删除 | auto:scene:delete / auto:step:delete |
-| 调试执行 | auto:scene:execute |
-
-调试运行期间步骤编辑自动锁定（暂停时未执行步骤除外）；无 `auto:step:update` 时编辑抽屉整体只读。
-
----
-
-## 八、常见问题
+## 七、常见问题
 
 1. **元素找不到超时**：优先把定位沉淀到元素库并选用更稳的定位方式（TEST_ID > ROLE > CSS > XPATH）；给该步骤调大超时；检查是否需要先切换 iframe
 2. **点了暂停没立即停**：暂停只在步骤边界生效，当前步骤（含等待步骤）执行完才会停
 3. **弹窗（alert）导致卡住**：在触发弹窗的点击步骤**之前**插入「对话框」步骤（一次性监听）
-4. **文件上传选哪些文件**：先在平台上传文件拿到文件 id，上传步骤只接受平台文件；input 无 multiple 属性时只上传第一个

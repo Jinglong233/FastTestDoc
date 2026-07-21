@@ -1,16 +1,13 @@
 # API 测试模块使用文档
 
-> 面向使用者的操作指南。菜单位置：**接口测试 → API 测试**。
 
----
 
 ## 一、页面布局
-
+![img.png](../../public/screenshots/api-test/api-interfence/img.png)
 - **左侧**：接口目录树（目录 + 接口混合），支持搜索、右键新建目录/接口、拖拽排序
 - **右侧**：多标签页工作区，点击接口打开编辑 Tab，可同时打开多个接口/用例
 - **顶部**：环境选择器（切换当前调试环境）、环境配置入口
 
----
 
 ## 二、接口管理
 
@@ -39,14 +36,14 @@
 
 ### 2.3 变量引用
 
-任意参数值中可使用 `${变量名}` 或 `{{变量名}}` 引用变量。变量来源优先级（同名覆盖）：
+任意参数值中可使用 `${变量名}` 或 `双大括号语法` 引用变量。变量来源优先级（同名覆盖）：
 
 **接口参数 > 环境变量 > 全局变量**
 
 调试结果区的「变量追踪」可看到每个变量的替换来源与命中情况。
 
 ### 2.4 参数级 Mock 数据
-
+![img_1.png](../../public/screenshots/api-test/api-interfence/img_1.png)
 参数表格中可将某个参数值设置为 Mock 生成规则（如 `@phone()`、`@integer(0, 100)`、`@character('lower', 8)`、`@template(123)`）：
 
 1. 点击参数行的 Mock 按钮打开规则弹窗
@@ -68,7 +65,7 @@ Body 原始 JSON 中也可直接手写 `@phone()` 等表达式。
 调试满意后点「保存为用例」，当前配置保存为该接口下的一个用例。用例挂在接口节点下，可维护多套参数/断言组合，供 API 场景引用。
 
 ### 2.7 导入
-
+![img_2.png](../../public/screenshots/api-test/api-interfence/img_2.png)
 - **Swagger 导入**：批量导入接口定义
 - **cURL 导入**：粘贴 cURL 命令自动解析为接口配置
 
@@ -79,29 +76,15 @@ Body 原始 JSON 中也可直接手写 `@phone()` 等表达式。
 
 ---
 
-## 三、权限说明
+## 三、Mock 功能使用
 
-| 操作 | 所需权限 |
-|------|---------|
-| 查看接口/目录 | auto:api:view |
-| 新建接口/复制/导入 | auto:api:create |
-| 编辑/保存/排序/保存用例 | auto:api:update |
-| 删除 | auto:api:delete |
-| 调试发送 | auto:api:execute |
-
-无 `auto:api:update` 权限时表单整体只读；环境配置入口需 `auto:env:view` 或 `auto:globalvar:view`。
-
----
-
-## 四、Mock 功能使用
-
-### 4.1 什么时候用 Mock
+### 3.1 什么时候用 Mock
 
 - 后端接口未开发完，提前编写接口定义和测试用例
 - 后端不稳定/限流，希望调试与场景稳定跑通
 - 模拟异常响应（500、特殊错误码）验证断言逻辑
 
-### 4.2 配置入口
+### 3.2 配置入口
 
 编辑接口 → 内层 Tab 切换到 **Mock**：
 
@@ -109,15 +92,15 @@ Body 原始 JSON 中也可直接手写 `@phone()` 等表达式。
 2. 设置响应状态码（默认 200）、响应延迟（ms）、响应 Header
 3. 选择响应体模式：
    - **字段规则（RULES）**：可视化配置字段生成规则，自动生成 JSON，无需手写语法
-   - **原始 JSON（RAW）**：手写 JSON，支持 `${var}`、`@phone()`、`{{__TEMPLATE(id)__}}` 等表达式
 
-### 4.3 字段规则说明
+
+### 3.3 字段规则说明
 
 每个字段配置：字段名、字段类型（STRING/INT/FLOAT/BOOLEAN/OBJECT/ARRAY）、Mock 规则、参数；OBJECT/ARRAY 可展开子字段。
 
 示例配置：
 
-```
+```text
 orderId   STRING  UUID
 amount    INT     整数 100~9999
 status    STRING  枚举 SUCCESS,FAIL
@@ -131,13 +114,13 @@ items     ARRAY   长度 3，元素为对象
 
 自动生成：
 
-```json
+```text
 {
-  "orderId": "550e8400-...",
-  "amount": 5234,
+  "orderId": "22341",
+  "amount": "5234",
   "status": "SUCCESS",
   "user": {"name": "张三", "phone": "13812345678"},
-  "items": [{"itemId": "...", "price": 12.50}, ...]
+  "items": [{"itemId": "...", "price": 12.50}]
 }
 ```
 
