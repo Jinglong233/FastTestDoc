@@ -94,36 +94,6 @@ Body 原始 JSON 中也可直接手写 `@phone()` 等表达式。
    - **字段规则（RULES）**：可视化配置字段生成规则，自动生成 JSON，无需手写语法
 
 
-### 3.3 字段规则说明
-
-每个字段配置：字段名、字段类型（STRING/INT/FLOAT/BOOLEAN/OBJECT/ARRAY）、Mock 规则、参数；OBJECT/ARRAY 可展开子字段。
-
-示例配置：
-
-```text
-orderId   STRING  UUID
-amount    INT     整数 100~9999
-status    STRING  枚举 SUCCESS,FAIL
-user      OBJECT
-  ├─ name  STRING  姓名 中文
-  └─ phone STRING  手机号
-items     ARRAY   长度 3，元素为对象
-  ├─ itemId STRING UUID
-  └─ price  FLOAT  浮点数 0~100
-```
-
-自动生成：
-
-```text
-{
-  "orderId": "22341",
-  "amount": "5234",
-  "status": "SUCCESS",
-  "user": {"name": "张三", "phone": "13812345678"},
-  "items": [{"itemId": "...", "price": 12.50}]
-}
-```
-
 ### 4.4 执行行为
 
 - 启用 Mock 后，调试/场景执行时不发真实请求，直接返回 Mock 响应
