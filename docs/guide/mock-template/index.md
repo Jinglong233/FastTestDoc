@@ -43,6 +43,6 @@ Mock 与数据模板是接口测试和自动化场景的两个重要辅助能力
 
 ## 相关文档
 
-- [Mock 响应](../api-test/mock)
-- [数据模板](../api-test/data-template)
+- [Mock 响应](../api-test/)
+- [数据模板](../api-test/数据模板使用文档)
 - [接口测试概览](../api-test/)
