@@ -1,6 +1,6 @@
 # 快速开始
 
-本页面将指导你通过 Docker Compose 快速部署和运行 FastTest 平台。
+本页面将指导你通过 Docker Compose 快速部署和运行 MokaTest 平台。
 
 ## 环境要求
 
@@ -8,7 +8,7 @@
 - Docker Compose plugin（`docker compose` 命令可用）
 - Git
 
-建议预留至少 2 核 CPU、4 GB 内存、40 GB 磁盘空间。首次构建会下载 Maven 依赖和 Playwright 浏览器镜像，需要较好的网络环境。
+建议预留至少 2 核 CPU、2 GB 内存、40 GB 磁盘空间。首次构建会下载 Maven 依赖和 Playwright 浏览器镜像，需要较好的网络环境。
 
 ---
 
@@ -20,7 +20,7 @@
 
    ```bash
    git clone <仓库地址>
-   cd FastTest
+   cd MokaTest
    ```
 
 2. 确认项目根目录包含 `docker-compose.yml` 和 `.env.example` 文件。
@@ -136,15 +136,5 @@
 - 后端：`cd backEnd && mvn clean install && mvn spring-boot:run -pl platform-starter`，默认端口 `7529`
 - 前端：`cd frontEnd && npm install && npm run dev`，默认端口 `3000`
 
-详细的 Docker 生产部署、HTTPS、备份恢复等内容可参考 [生产部署](./deploy)。
 
 ---
-
-## 后续阅读
-
-- [核心概念](./concepts) — 团队、项目、需求、用例、场景等
-- [团队与项目](./team-project/) — 团队、项目、成员、权限
-- [质量管理](./qa/) — 需求、BUG、用例、测试计划
-- [接口测试](./api-test/) — API 接口、Mock、数据模板
-- [UI 自动化](./ui-automation/) — 元素库、UI 场景
-- [测试运行](./test-run/) — 任务计划、报告

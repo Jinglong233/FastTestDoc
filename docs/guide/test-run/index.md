@@ -14,13 +14,10 @@
 
 ## 两种计划
 
-FastTest 中存在两类「计划」：
+MokaTest 中存在两类「计划」：
+
+![img.png](../../public/screenshots/test-run/img.png)
 
 - **QA 测试计划**（`/qa/testPlan`）：组合文字用例，手动执行。
 - **自动化任务计划**（`/test-run/planList`）：组合 UI/API 场景，支持定时和手动执行。
 
-本章档描述的是自动化任务计划。
-
-::: tip 截图占位
-此处需补充「任务计划列表页」截图。
-:::

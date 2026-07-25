@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'MokaTest 平台文档',
-  description: 'FastTest 质量管理 & 自动化测试平台说明文档',
+  description: 'MokaTest 质量管理 & 自动化测试平台说明文档',
   lang: 'zh-CN',
   base: '/FastTestDoc/',
   lastUpdated: true,
@@ -20,19 +20,15 @@ export default defineConfig({
           items: [
             { text: 'MokaTest 是什么', link: '/guide/what-is-fasttest' },
             { text: '快速开始', link: '/guide/getting-started' },
-            { text: '系统架构', link: '/guide/architecture' },
-            { text: '核心概念', link: '/guide/concepts' }
           ]
         },
         {
           text: '团队与项目',
           collapsed: false,
           items: [
-            { text: '概览', link: '/guide/team-project/' },
             { text: '团队管理', link: '/guide/team-project/team' },
             { text: '项目管理', link: '/guide/team-project/project' },
             { text: '成员与角色', link: '/guide/team-project/member' },
-            { text: '权限模型', link: '/guide/team-project/permission' }
           ]
         },
         {
@@ -51,7 +47,6 @@ export default defineConfig({
           text: '接口测试',
           collapsed: false,
           items: [
-            { text: '概览', link: '/guide/api-test/' },
             { text: 'API测试', link: '/guide/api-test/API测试使用文档' },
             { text: 'API场景', link: '/guide/api-test/API场景使用文档' },
             { text: '数据模板', link: '/guide/api-test/数据模板使用文档' },
@@ -62,7 +57,6 @@ export default defineConfig({
           text: 'UI 自动化',
           collapsed: false,
           items: [
-            { text: '概览', link: '/guide/ui-automation/' },
             { text: 'UI场景', link: '/guide/ui-automation/UI场景使用文档' },
             { text: '元素库', link: '/guide/ui-automation/元素库使用文档' },
 

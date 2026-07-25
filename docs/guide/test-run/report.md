@@ -23,9 +23,7 @@
 
 报告列表页可按任务类型、状态、执行人等条件筛选。
 
-::: tip 截图占位
-此处需补充「测试报告列表页」截图。
-:::
+![img_5.png](../../public/screenshots/report/img_5.png)
 
 ## 报告详情
 
@@ -37,21 +35,9 @@
 - 失败截图和错误信息（UI）
 - 执行日志和 Trace
 
-::: tip 截图占位
-此处需补充「测试报告详情页」截图。
-:::
+![img_4.png](../../public/screenshots/report/img_4.png)
 
 ## 视频与截图
 
 UI 任务执行过程中会自动录制视频和截取关键画面，可在报告详情中回放。
 
-## 相关接口
-
-| 接口 | 说明 |
-|------|------|
-| `POST /report/reportPageList` | 报告列表 |
-| `GET /report/allReport` | 所有报告 |
-| `GET /report/reportDetail` | 报告详情 |
-| `GET /report/deleteReport` | 删除报告 |
-| `GET /screenshots/{filename}` | 读取截图 |
-| `GET /automation/trace/{fileId}` | 下载 Trace 文件 |

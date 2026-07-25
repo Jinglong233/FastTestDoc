@@ -23,9 +23,7 @@
 4. 配置运行参数和 Webhook 通知。
 5. 保存计划。
 
-::: tip 截图占位
-此处需补充「新建任务计划弹窗」截图。
-:::
+![img.png](../../public/screenshots/test-run/img.png)
 
 ## 选择场景
 
@@ -35,9 +33,7 @@
 - 整个目录批量选择
 - 调整场景执行顺序
 
-::: tip 截图占位
-此处需补充「任务详情页-已选场景列表」截图。
-:::
+![img_1.png](../../public/screenshots/test-run/img_1.png)
 
 ## 执行任务
 
@@ -47,26 +43,11 @@
 
 执行前若任务正在运行，会先停止当前任务。
 
-::: tip 截图占位
-此处需补充「任务执行中状态」截图。
-:::
+![img_2.png](../../public/screenshots/test-run/img_2.png)
+
+![img_3.png](../../public/screenshots/test-run/img_3.png)
 
 ## 删除计划
 
 删除计划前，若任务正在运行，系统会先停止任务，再执行逻辑删除。
 
-## 相关接口
-
-| 接口 | 说明 |
-|------|------|
-| `GET /plan/allPlan` | 任务计划列表 |
-| `GET /plan/getPlanById` | 计划详情 |
-| `POST /plan/addPlan` | 新增计划 |
-| `POST /plan/updatePlan` | 更新计划 |
-| `GET /plan/deletePlan` | 删除计划 |
-| `POST /plan/updatePlanRunningConfig` | 更新运行配置 |
-| `POST /task/active/{planId}` | 激活/启动任务 |
-| `POST /task/stop/{planId}` | 停止任务 |
-| `POST /task/execute/{taskId}` | 执行任务 |
-| `POST /task/reRun` | 重跑任务 |
-| `GET /task/status` | 任务状态 |

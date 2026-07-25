@@ -1,6 +1,6 @@
 # MokaTest 是什么
 
-FastTest 是一个面向软件研发团队的质量管理与自动化测试平台，覆盖从需求到发布的完整测试流程。
+MokaTest 是一个面向软件研发团队的质量管理与自动化测试平台，覆盖从需求到发布的完整测试流程。
 
 ## 核心能力
 
@@ -49,9 +49,7 @@ FastTest 是一个面向软件研发团队的质量管理与自动化测试平�
 
 - 前端：Vue 3 + Vite + TypeScript + Arco Design
 - 后端：Spring Boot + MyBatis-Plus + Sa-Token
+- UI自动化：Playwright
 - 数据库：MySQL 8.0+
-- 文档：VitePress
 
-::: tip 下一步
-推荐阅读 [快速开始](./getting-started)，了解如何部署和使用 FastTest。
-:::
+

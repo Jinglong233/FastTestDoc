@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: FastTest
+  name: MokaTest
   text: 一个有点"较真"的测试协作平台
   tagline: 不是文档库，是把需求、用例、BUG、接口测试串成一条线的实战工具。
   actions:
@@ -11,7 +11,7 @@ hero:
       link: /guide/getting-started
     - theme: alt
       text: 浏览文档
-      link: /guide/what-is-fasttest
+      link: /guide/what-is-mokatest
 ---
 
 <div class="ft-section ft-section-alt">
@@ -92,7 +92,7 @@ hero:
 </div>
 
 <div class="ft-section">
-  <h2 class="ft-section-title">为什么选 FastTest？</h2>
+  <h2 class="ft-section-title">为什么选 MokaTest？</h2>
   <div class="ft-cards">
     <div class="ft-card">
       <div class="ft-card-tag tag-qa">QA</div>

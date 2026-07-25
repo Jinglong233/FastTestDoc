@@ -1,7 +1,7 @@
 {
-  "name": "fasttest-doc",
+  "name": "MokaTest-doc",
   "version": "1.0.0",
-  "description": "FastTest 平台说明文档",
+  "description": "MokaTest 平台说明文档",
   "private": true,
   "type": "module",
   "scripts": {
