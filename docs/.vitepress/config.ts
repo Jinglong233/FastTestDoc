@@ -35,7 +35,6 @@ export default defineConfig({
           text: '质量管理',
           collapsed: false,
           items: [
-            { text: '概览', link: '/guide/qa/' },
             { text: '需求池', link: '/guide/qa/requirement' },
             { text: 'BUG 池', link: '/guide/qa/bug' },
             { text: '用例与测试集', link: '/guide/qa/test-case' },
@@ -66,7 +65,6 @@ export default defineConfig({
           text: '测试运行',
           collapsed: false,
           items: [
-            { text: '概览', link: '/guide/test-run/' },
             { text: '任务计划', link: '/guide/test-run/plan' },
             { text: 'Webhook 通知', link: '/guide/test-run/webhook' },
             { text: '测试报告', link: '/guide/test-run/report' }
