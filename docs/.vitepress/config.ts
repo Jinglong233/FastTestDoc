@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import Icons from 'unplugin-icons/vite'
 
 export default defineConfig({
   title: 'MokaTest 平台文档',
@@ -6,6 +7,15 @@ export default defineConfig({
   lang: 'zh-CN',
   base: '/FastTestDoc/',
   lastUpdated: true,
+
+  vite: {
+    plugins: [
+      Icons({
+        compiler: 'vue3',
+        autoInstall: false,
+      }),
+    ],
+  },
 
   themeConfig: {
     nav: [

@@ -26,7 +26,9 @@ MokaTest 的自动化测试能力覆盖接口测试、UI 自动化、测试计�
 
 ## 相关文档
 
-- [接口测试概览](../api-test/)
-- [UI 自动化概览](../ui-automation/)
+- [API 测试](../api-test/API测试使用文档)
+- [API 场景](../api-test/API场景使用文档)
+- [数据模板](../api-test/数据模板使用文档)
+- [UI 场景](../ui-automation/UI场景使用文档)
+- [元素库](../ui-automation/元素库使用文档)
 - [测试运行概览](../test-run/)
-- [Mock 与数据模板](../mock-template/)
