@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import Icons from 'unplugin-icons/vite'
 
 export default defineConfig({
-  title: 'MokaTest 平台文档',
+  title: 'MokaTest',
   description: 'MokaTest 质量管理 & 自动化测试平台说明文档',
   lang: 'zh-CN',
   base: '/FastTestDoc/',
@@ -18,6 +18,7 @@ export default defineConfig({
   },
 
   themeConfig: {
+    logo: '/public/logo/logo.png',
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/what-is-fasttest' },
