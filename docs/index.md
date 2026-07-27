@@ -19,11 +19,7 @@ hero:
 
     - theme: brand
       text: 快速开始
-      link: /guide/
-
-    - theme: alt
-      text: 查看文档
-      link: /guide/introduction
+      link: /guide/what-is-fasttest
 
 ---
 
