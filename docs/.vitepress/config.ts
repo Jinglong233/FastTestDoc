@@ -18,7 +18,7 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: '/public/logo/logo.png',
+    logo: '/logo/logo.png',
     nav: [
       { text: '首页', link: '/' },
       { text: '指南', link: '/guide/what-is-fasttest' },
