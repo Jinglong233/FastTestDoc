@@ -63,6 +63,7 @@ export default defineConfig({
             { text: 'API测试', link: '/guide/api-test/API测试使用文档' },
             { text: 'API场景', link: '/guide/api-test/API场景使用文档' },
             { text: '数据模板', link: '/guide/api-test/数据模板使用文档' },
+            { text: '自定义函数', link: '/guide/api-test/自定义函数使用文档' },
             { text: '环境管理', link: '/guide/api-test/环境管理使用文档' },
           ]
         },
