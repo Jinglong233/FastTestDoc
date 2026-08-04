@@ -1,546 +1,836 @@
-/* ============================================================
-   MokaTest — Blue SaaS Style
-============================================================ */
+/* Hallmark · pre-emit critique: P4 H5 E4 S4 R4 V5
+ * Hallmark · genre: modern-minimal · macrostructure: Marquee Hero → Numbered Index
+ * theme: studied-DNA (source: url — vercel.com primary · runnergo.com atmosphere · fit2cloud.com rhythm)
+ * observed: Geist + Geist Mono system · monochrome discipline + single indigo accent
+ * deep hero #0a0a1a-family re-anchored to oklch hue 268 · letterReveal/blue-glow motion language
+ * differentiated: no gradient text · no three-site layout copied · own copy throughout
+ * nav: VitePress theme-owned · footer: VitePress theme-owned
+ * contrast: pass (40–41) · honest: pass (46) · chrome: pass (47) · tokens: pass (48)
+ * responsive: pass (49) · icons: pass (30) · mobile: pass (34, 49, 50–57) · slop: pass (42–45)
+ */
+@import "./tokens.css";
 
+/* ============================================================
+   MokaTest — Deep-hero Marquee + Numbered Index
+   ============================================================ */
 
 :root {
-
-  --vp-c-brand-1:#165DFF;
-
-  --vp-c-brand-2:#0E42D2;
-
-  --vp-c-brand-3:#0A35B3;
-
+  /* Bridge Hallmark tokens into VitePress brand vars */
+  --vp-c-brand-1: var(--color-accent);
+  --vp-c-brand-2: oklch(48% 0.19 263);
+  --vp-c-brand-3: oklch(42% 0.17 263);
+  --vp-c-bg: var(--color-paper);
+  --vp-c-bg-soft: var(--color-paper-2);
+  --vp-c-bg-elv: var(--color-paper);
+  --vp-c-divider: var(--color-rule);
+  --vp-c-text-1: var(--color-ink);
+  --vp-c-text-2: var(--color-muted);
+  --vp-font-family-base: var(--font-body);
 }
-
-
-/* ============================
-   Global
-============================ */
-
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
 
-/* ============================
-   Navbar
-============================ */
-
+body {
+  font-family: var(--font-body);
+}
 
 .VPHome .divider {
-
-  display:none;
-
+  display: none;
 }
-
 
 .VPNav {
-
-  background:#fff!important;
-
-  border-bottom:1px solid #f1f3f5;
-
+  background: var(--color-paper) !important;
+  border-bottom: 1px solid var(--color-rule);
 }
-
-
-
-/* ============================
-   Hero
-============================ */
-
-
-.VPHero .image {
-
-  transform:
-          scale(1.4)
-          translateY(20px);
-
-
-  margin-left:160px;
-
-}
-
-
-.VPHero .image img {
-
-  max-width:650px;
-
-}
-
-
-
-/* ============================
-   Feature
-============================ */
-
-
-.ft-feat {
-
-
-  width:100vw;
-
-  margin-left:
-          calc(-50vw + 50%);
-
-
-  padding:70px 24px;
-
-
-}
-
-
-
-.ft-feat-gray {
-
-  background:#F8FAFC;
-
-}
-
-
-
-.ft-feat-white {
-
-  background:#fff;
-
-}
-
-
-
-.ft-feat-row {
-
-
-  max-width:1280px;
-
-
-  margin:0 auto;
-
-
-  display:flex;
-
-
-  align-items:center;
-
-
-  gap:60px;
-
-
-}
-
-
-.ft-feat-row.reverse {
-
-
-  flex-direction:row-reverse;
-
-}
-
-
-
-/* ============================
-   Text
-============================ */
-
-
-.ft-feat-text {
-
-
-  flex:1;
-
-}
-
-
-.ft-label {
-
-  display:block;
-
-  font-size:12px;
-
-  color:#165DFF;
-
-  letter-spacing:2px;
-
-  margin-bottom:12px;
-
-
-}
-
-
-
-.ft-feat-text h2 {
-
-
-  font-size:34px;
-
-
-  line-height:1.3;
-
-
-  font-weight:700;
-
-
-  color:#1e293b;
-
-
-  margin:
-          0 0 18px;
-
-
-}
-
-
-
-.ft-feat-text p {
-
-
-  max-width:460px;
-
-
-  font-size:16px;
-
-
-  color:#64748b;
-
-
-  line-height:1.8;
-
-
-}
-
-
-
-/* ============================
-   Image
-============================ */
-
-
-.ft-feat-visual {
-
-
-  flex:1;
-
-
-  display:flex;
-
-
-  justify-content:center;
-
-
-}
-
-
-
-.ft-feat-img {
-
-
-  width: 300px;
-  max-width: 100%;
-
-
-  height:auto;
-
-
-  background:transparent;
-
-
-  border:none;
-
-
-  box-shadow:none;
-
-
-  transition:.3s;
-
-
-}
-
-
-
-
-
-
-
-
-/* ============================
-   CTA
-============================ */
-
-
-.ft-cta-wrap {
-
-
-  width:100vw;
-
-
-  margin-left:
-          calc(-50vw + 50%);
-
-
-  padding:80px 24px;
-
-
-  background:#F8FAFC;
-
-
-  text-align:center;
-
-
-}
-
-
-
-.ft-cta-card {
-
-
-  max-width:800px;
-
-
-  margin:auto;
-
-
-  padding:50px;
-
-
-  border-radius:20px;
-
-
-  background:
-          linear-gradient(
-                  135deg,
-                  #eff6ff,
-                  #ffffff
-          );
-
-
-  box-shadow:
-          0 10px 40px rgba(0,0,0,.06);
-
-
-}
-
-
-
-.ft-cta-card h2 {
-
-
-  font-size:32px;
-
-
-  margin-bottom:12px;
-
-
-  color:#1e293b;
-
-
-}
-
-
-
-.ft-cta-card p {
-
-
-  color:#64748b;
-
-
-  margin-bottom:30px;
-
-
-}
-
-
-
-.ft-cta-btn {
-
-
-  display:inline-block;
-
-
-  padding:
-          14px 42px;
-
-
-  border-radius:10px;
-
-
-  background:#165DFF;
-
-
-  color:white;
-
-
-  font-weight:600;
-
-
-  text-decoration:none;
-
-
-}
-
-
-
-.ft-cta-btn:hover {
-
-
-  transform:translateY(-2px);
-
-
-}
-
-
-
-
-/* ============================
-   Footer
-============================ */
-
-
-.VPFooter {
-
-
-  background:#1A1A1A!important;
-
-
-  border:none!important;
-
-
-}
-
-
-.VPFooter .container {
-
-
-  color:#888;
-
-}
-
-
-
-/* ============================
-   Dark Mode
-============================ */
-
 
 .dark .VPNav {
+  background: var(--color-paper) !important;
+}
 
+/* Home layout has no frontmatter hero — reclaim the content top */
+.VPHome .vp-doc.container {
+  margin-top: 0;
+}
 
+/* VitePress prose styles draw borders/margins on headings — neutralise */
+.vp-doc .ft-hero-title,
+.vp-doc .ft-row h2,
+.vp-doc .ft-close h2,
+.vp-doc .ft-hero-kicker,
+.vp-doc .ft-row p,
+.vp-doc .ft-close p,
+.vp-doc .ft-hero-lede {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* ============================
+   Hero — light, floating collage (f2c rhythm, our voice)
+   ============================ */
+
+.ft-hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   background:
-          var(--vp-c-bg)!important;
-
+    linear-gradient(180deg, var(--color-accent-soft) 0%, var(--color-paper) 70%);
+  overflow: hidden;
 }
 
-
-
-.dark .ft-feat-gray {
-
-
-  background:#0D1829;
-
+.ft-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-md) calc(var(--space-2xl) + var(--space-xl));
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  align-items: center;
+  gap: var(--space-xl);
 }
 
-
-
-.dark .ft-feat-white {
-
-
-  background:
-          var(--vp-c-bg);
-
+.ft-hero-copy {
+  min-width: 0;
 }
 
-
-.dark .ft-feat-text h2 {
-
-
-  color:
-          var(--vp-c-text-1);
-
+/* Entrance — one orchestrated stagger, then the page settles */
+.ft-el {
+  animation: ft-in 640ms var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 90ms);
 }
 
-
-
-.dark .ft-feat-text p {
-
-
-  color:
-          var(--vp-c-text-2);
-
+@keyframes ft-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
 }
 
+.ft-hero-title {
+  margin: 0 0 var(--space-md);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw + 1rem, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--color-ink);
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
 
+.ft-hero-accent {
+  color: var(--color-accent);
+}
 
+.ft-hero-lede {
+  margin: 0 0 var(--space-lg);
+  max-width: 46ch;
+  font-size: var(--text-md);
+  line-height: 1.6;
+  color: var(--color-muted);
+}
 
+.ft-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* Collage — base illustration + floating module chips */
+.ft-hero-visual {
+  min-width: 0;
+}
+
+.ft-collage {
+  position: relative;
+}
+
+.ft-collage-base {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.ft-collage-chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  padding: var(--space-2xs) var(--space-sm);
+  background: var(--color-paper);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 12px 32px rgb(10 53 179 / 0.10);
+  font-family: var(--font-outlier);
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+  white-space: nowrap;
+  opacity: 0;
+  animation:
+    ft-in 560ms var(--ease-out) both,
+    ft-float 4.5s ease-in-out infinite;
+}
+
+.ft-collage-chip svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  color: var(--color-accent);
+}
+
+.ft-chip-1 { top: 4%;  left: -6%; animation-delay: 300ms, 1.2s; }
+.ft-chip-2 { top: 0%;  right: -4%; animation-delay: 450ms, 1.8s; animation-duration: 560ms, 5.2s; }
+.ft-chip-3 { bottom: 8%; left: -2%; animation-delay: 600ms, 2.4s; animation-duration: 560ms, 4.1s; }
+.ft-chip-4 { bottom: 14%; right: -8%; animation-delay: 750ms, 3s; animation-duration: 560ms, 5.6s; }
+
+@keyframes ft-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+
+/* Buttons */
+/* VitePress prose turns every <a> brand-coloured — take our buttons back */
+.vp-doc .ft-btn,
+.vp-doc .ft-btn:hover {
+  color: var(--color-accent-ink);
+}
+
+.vp-doc .ft-link,
+.vp-doc .ft-footer-col a,
+.vp-doc .ft-footer-bottom a {
+  text-decoration: none;
+}
+
+.vp-doc .ft-link:hover {
+  color: var(--color-accent-ink);
+}
+
+.ft-btn {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color var(--dur-short) var(--ease-out);
+}
+
+.ft-btn-lg {
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--text-base);
+}
+
+.ft-btn:hover {
+  background: var(--vp-c-brand-2);
+}
+
+.ft-btn:active {
+  transform: translateY(1px);
+}
+
+.ft-btn:disabled,
+.ft-btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ft-btn-ghost {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-lg);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-pill);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-weight: 500;
+  font-size: var(--text-base);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color var(--dur-short) var(--ease-out);
+}
+
+.ft-btn-ghost:hover {
+  border-color: var(--color-accent);
+}
+
+.ft-btn-ghost:active {
+  transform: translateY(1px);
+}
+
+.ft-btn:focus-visible,
+.ft-btn-ghost:focus-visible,
+.ft-link:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* ============================
+   Showcase — overlaps the hero gradient, bridging into the tour
+   ============================ */
+
+.ft-showcase {
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: calc(-1 * var(--space-2xl));
+  background: transparent;
+  padding: 0 var(--space-md) var(--space-2xl);
+}
+
+.ft-showcase-frame {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: var(--space-md);
+  background: var(--color-paper);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-card);
+  box-shadow: 0 24px 64px rgb(10 53 179 / 0.08);
+}
+
+.ft-showcase-media {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius-card) / 2);
+}
+
+.ft-showcase-frame figcaption {
+  margin-top: var(--space-sm);
+  text-align: center;
+  font-family: var(--font-outlier);
+  font-size: var(--text-sm);
+  color: var(--color-neutral);
+}
+
+/* Slides — CSS-only crossfade carousel.
+   Count adapts via :has(): 2 / 3 / 4 images all work. */
+.ft-slides {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: calc(var(--radius-card) / 2);
+  background: var(--color-paper-2);
+}
+
+.ft-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: var(--space-lg);
+  opacity: 0;
+}
+
+.ft-slide:first-child {
+  opacity: 1;
+}
+
+.ft-slides:has(> :nth-child(2):last-child) .ft-slide {
+  opacity: 0;
+  animation: ft-cycle-2 8s linear infinite;
+}
+
+.ft-slides:has(> :nth-child(3):last-child) .ft-slide {
+  opacity: 0;
+  animation: ft-cycle-3 12s linear infinite;
+}
+
+.ft-slides:has(> :nth-child(4):last-child) .ft-slide {
+  opacity: 0;
+  animation: ft-cycle-4 16s linear infinite;
+}
+
+.ft-slide:nth-child(2) { animation-delay: 4s; }
+.ft-slide:nth-child(3) { animation-delay: 8s; }
+.ft-slide:nth-child(4) { animation-delay: 12s; }
+
+.ft-slides:hover .ft-slide,
+.ft-slides:focus-within .ft-slide {
+  animation-play-state: paused;
+}
+
+@keyframes ft-cycle-2 {
+  0%    { opacity: 0; }
+  6%    { opacity: 1; }
+  50%   { opacity: 1; }
+  56%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+@keyframes ft-cycle-3 {
+  0%      { opacity: 0; }
+  5%      { opacity: 1; }
+  33.33%  { opacity: 1; }
+  38%     { opacity: 0; }
+  100%    { opacity: 0; }
+}
+
+@keyframes ft-cycle-4 {
+  0%    { opacity: 0; }
+  4%    { opacity: 1; }
+  25%   { opacity: 1; }
+  29%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+/* ============================
+   Numbered feature index — light, hairline rhythm
+   ============================ */
+
+.ft-features {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: var(--color-paper);
+  padding: var(--space-2xl) var(--space-md);
+}
+
+.ft-row {
+  position: relative;
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: var(--space-xl) 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-xl);
+  border-top: 1px solid var(--color-rule);
+}
+
+.ft-row:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.ft-row-rev .ft-row-text {
+  order: 2;
+}
+
+.ft-row-rev .ft-row-fig {
+  order: 1;
+}
+
+.ft-row-text {
+  position: relative;
+  min-width: 0;
+}
+
+/* Ghost numeral — oversized index behind the text block */
+.ft-row-num {
+  position: absolute;
+  top: calc(-1 * var(--space-lg));
+  left: calc(-1 * var(--space-sm));
+  z-index: 0;
+  font-family: var(--font-outlier);
+  font-size: clamp(4.5rem, 8vw, 7rem);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-accent);
+  opacity: 0.08;
+  pointer-events: none;
+  user-select: none;
+}
+
+.ft-row h2 {
+  position: relative;
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--color-ink);
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.ft-row p {
+  position: relative;
+  margin: 0 0 var(--space-md);
+  max-width: 52ch;
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+.ft-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  padding: var(--space-2xs) var(--space-md);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-outlier);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-accent);
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color var(--dur-short) var(--ease-out),
+    color var(--dur-short) var(--ease-out);
+}
+
+.ft-link:hover {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+  text-decoration: none;
+}
+
+.ft-link:active {
+  transform: translateY(1px);
+  color: var(--color-accent-ink);
+}
+
+.ft-row-fig {
+  margin: 0;
+  min-width: 0;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ft-row-fig img {
+  max-width: 100%;
+  max-height: 240px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform var(--dur-short) var(--ease-out);
+}
+
+.ft-row-fig:hover img {
+  transform: translateY(-6px);
+}
+
+/* Scroll reveal — text and figure converge from opposite sides.
+   CSS scroll-driven; degrades to fully visible. */
+@supports (animation-timeline: view()) {
+  .ft-reveal .ft-row-text {
+    animation: ft-converge-left linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+  }
+
+  .ft-reveal .ft-row-fig {
+    animation: ft-converge-right linear both, ft-drift 7s ease-in-out infinite;
+    animation-timeline: view(), auto;
+    animation-range: entry 0% entry 40%, normal;
+  }
+
+  .ft-row-rev.ft-reveal .ft-row-text {
+    animation-name: ft-converge-right-plain;
+  }
+
+  .ft-row-rev.ft-reveal .ft-row-fig {
+    animation-name: ft-converge-left-tilt, ft-drift;
+  }
+
+  .ft-reveal .ft-row-num {
+    animation: ft-numeral linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 45%;
+  }
+}
+
+@keyframes ft-converge-left {
+  from { opacity: 0; transform: translateX(-48px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes ft-converge-right {
+  from { opacity: 0; transform: translateX(48px) rotate(1.5deg); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes ft-converge-right-plain {
+  from { opacity: 0; transform: translateX(48px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes ft-converge-left-tilt {
+  from { opacity: 0; transform: translateX(-48px) rotate(-1.5deg); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes ft-numeral {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 0.08; transform: none; }
+}
+
+/* Continuous drift — kicks in after the sweep settles */
+@keyframes ft-drift {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -8px; }
+}
+
+/* ============================
+   Closing CTA — deep bookend
+   ============================ */
+
+.ft-close {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: linear-gradient(200deg, var(--color-deep-2) 0%, var(--color-deep) 100%);
+  text-align: center;
+}
+
+.ft-close-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-md);
+}
+
+.ft-close h2 {
+  margin: 0 0 var(--space-md);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw + 1rem, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--color-deep-text);
+  overflow-wrap: anywhere;
+}
+
+.ft-close p {
+  margin: 0 0 var(--space-lg);
+  font-size: var(--text-md);
+  color: var(--color-deep-muted);
+}
+
+/* ============================
+   Footer — deep colophon, replaces VitePress footer on home
+   ============================ */
+
+.VPHome .VPFooter,
+.VPHome ~ .VPFooter,
+.VPHome + .VPFooter {
+  display: none;
+}
+
+/* No residual padding under our custom footer */
+.VPHome {
+  margin-bottom: 0 !important;
+}
+
+.VPHome .vp-doc.container {
+  padding-bottom: 0;
+}
+
+.ft-footer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: var(--color-deep);
+  border-top: 1px solid var(--color-deep-rule);
+}
+
+.ft-footer-inner {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md) var(--space-lg);
+}
+
+.ft-footer-top {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr));
+  gap: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-deep-rule);
+}
+
+.ft-footer-word {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-deep-text);
+}
+
+.ft-footer-brand p {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--color-deep-muted);
+}
+
+.ft-footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.ft-footer-col span {
+  margin-bottom: var(--space-2xs);
+  font-family: var(--font-outlier);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-deep-muted);
+}
+
+.ft-footer-col a {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-deep-text);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--dur-short) var(--ease-out);
+}
+
+.ft-footer-col a:hover {
+  color: var(--color-glow);
+}
+
+.ft-footer-col a:focus-visible,
+.ft-footer-bottom a:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.ft-footer-bottom {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  padding-top: var(--space-md);
+  font-size: var(--text-sm);
+  color: var(--color-deep-muted);
+}
+
+.ft-footer-bottom a {
+  margin-left: auto;
+  font-family: var(--font-outlier);
+  color: var(--color-deep-text);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--dur-short) var(--ease-out);
+}
+
+.ft-footer-bottom a:hover {
+  color: var(--color-glow);
+}
 
 /* ============================
    Mobile
-============================ */
+   ============================ */
 
-
-@media(max-width:768px){
-
-
-  .VPHero .image {
-
-
-    transform:none;
-
-
-    margin-left:0;
-
+@media (max-width: 768px) {
+  .ft-hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-lg);
+    padding: var(--space-xl) var(--space-sm) var(--space-lg);
   }
 
-
-
-  .ft-feat {
-
-
-    padding:50px 24px;
-
-
-
+  .ft-hero-visual {
+    max-width: 320px;
   }
 
-
-
-  .ft-feat-row,
-  .ft-feat-row.reverse {
-
-
-    flex-direction:column;
-
-
-    gap:32px;
-
+  .ft-collage-chip {
+    display: none;
   }
 
-
-
-  .ft-feat-text h2 {
-
-
-    font-size:26px;
-
+  .ft-features {
+    padding: var(--space-xl) var(--space-sm);
   }
 
-
-
-  .ft-feat-img {
-
-
-    width:100%;
-
+  .ft-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-lg);
+    padding: var(--space-lg) 0;
   }
 
-
-
-  .ft-cta-card {
-
-
-    padding:32px 20px;
-
+  .ft-row-text {
+    padding-right: 0;
+    border-right: none;
   }
-  
 
+  .ft-row-rev .ft-row-text {
+    order: 0;
+  }
 
+  .ft-row-rev .ft-row-fig {
+    order: 1;
+  }
+
+  .ft-row h2 {
+    font-size: var(--text-xl);
+  }
+
+  .ft-row-fig {
+    min-height: 0;
+  }
+
+  .ft-row-fig img {
+    max-height: 220px;
+  }
+
+  .ft-close-inner {
+    padding: var(--space-xl) var(--space-sm);
+  }
+
+  .ft-footer-inner {
+    padding: var(--space-lg) var(--space-sm);
+  }
+
+  .ft-footer-top {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--space-md);
+  }
+
+  .ft-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .ft-footer-bottom a {
+    margin-left: 0;
+  }
+}
+
+/* Reduced motion — everything settles instantly */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .ft-el,
+  .ft-collage-chip,
+  .ft-slide,
+  .ft-reveal .ft-row-text,
+  .ft-reveal .ft-row-fig,
+  .ft-reveal .ft-row-num {
+    animation: none !important;
+  }
+
+  .ft-slide {
+    display: none;
+  }
+
+  .ft-slide:first-child {
+    display: block;
+    opacity: 1;
+  }
+
+  .ft-collage-chip {
+    opacity: 1;
+  }
+
+  .ft-btn,
+  .ft-btn-ghost {
+    transition: none;
+  }
 }

@@ -17,6 +17,8 @@ export default defineConfig({
     ],
   },
 
+  appearance: false,
+
   themeConfig: {
     logo: '/logo/logo.png',
     nav: [
@@ -85,16 +87,9 @@ export default defineConfig({
         },
       ]
     },
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Jinglong233/MokaTest' }
     ],
-
-    footer: {
-      message: '基于 MIT 协议发布',
-      copyright: 'Copyright © 2026 MokaTest Team'
-    },
-
     search: {
       provider: 'local'
     },

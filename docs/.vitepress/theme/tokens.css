@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap");
+
+/* ============================================================
+   MokaTest · Hallmark tokens — theme: Cobalt (modern-minimal)
+   ============================================================ */
+
+:root {
+  /* Colour — cool anchor, hue ~263 (brand cobalt) */
+  --color-paper:      oklch(98.5% 0.004 263);
+  --color-paper-2:    oklch(96.5% 0.006 263);
+  --color-rule:       oklch(91%   0.008 263);
+  --color-neutral:    oklch(55%   0.02  263);
+  --color-muted:      oklch(45%   0.02  263);
+  --color-ink:        oklch(21%   0.03  263);
+  --color-accent:     oklch(55%   0.21  263);
+  --color-accent-ink: oklch(99% 0.003 263);
+  --color-accent-soft:oklch(95%   0.02  263);
+  --color-focus:      oklch(55%   0.21  263);
+
+  /* Deep surfaces — hero & closing CTA (mode-independent dark) */
+  --color-deep:       oklch(18%   0.035 268);
+  --color-deep-2:     oklch(23%   0.045 268);
+  --color-deep-rule:  oklch(32%   0.04  268);
+  --color-deep-text:  oklch(93%   0.008 263);
+  --color-deep-muted: oklch(70%   0.02  263);
+  --color-glow:       oklch(62%   0.19  263);
+
+  /* Type — display latin + CJK pairing, mono outlier (tile links only) */
+  --font-display: "Geist", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-body:    "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-outlier: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Type scale — 1.25 major third */
+  --text-sm:   0.8rem;
+  --text-base: 1rem;
+  --text-md:   1.25rem;
+  --text-lg:   1.5625rem;
+  --text-xl:   1.9531rem;
+  --text-2xl:  2.4414rem;
+  --text-display: clamp(2.25rem, 4vw + 1rem, 3.5rem);
+
+  /* Spacing — 4pt named scale */
+  --space-2xs: 0.5rem;
+  --space-xs:  0.75rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2rem;
+  --space-xl:  3rem;
+  --space-2xl: 4.5rem;
+
+  /* Motion */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-short:  220ms;
+
+  /* Shape */
+  --radius-card: 8px;
+  --radius-pill: 999px;
+}
+
+.dark {
+  --color-paper:      oklch(16%   0.015 263);
+  --color-paper-2:    oklch(19.5% 0.015 263);
+  --color-rule:       oklch(29%   0.015 263);
+  --color-neutral:    oklch(65%   0.02  263);
+  --color-muted:      oklch(75%   0.012 263);
+  --color-ink:        oklch(93%   0.008 263);
+  --color-accent:     oklch(68%   0.18  263);
+  --color-accent-ink: oklch(18%   0.03  263);
+  --color-accent-soft:oklch(24%   0.03  263);
+  --color-focus:      oklch(68%   0.18  263);
+}
