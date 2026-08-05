@@ -108,7 +108,9 @@
 
 - 平台已配置并启用 AI 模型（超管在「AI 配置」中维护，有生效中的档案即可），未配置时该能力自动关闭，不影响原有失败流程
 - 建议选用**非推理型模型**（如 deepseek-v4-pro）；推理型模型可能因输出被截断导致自愈失效
-
+![img_12.png](../../public/screenshots/ui-automation/ui-scene/img_12.png)
+![img_13.png](../../public/screenshots/ui-automation/ui-scene/img_13.png)
+![img_14.png](../../public/screenshots/ui-automation/ui-scene/img_14.png)
 ### 5.2 触发条件
 
 仅对**定位类失败**触发：等元素超时、一个定位匹配到多个元素。断言失败、脚本错误等不触发。
@@ -129,7 +131,7 @@ AI 确认页面上找不到该元素时，步骤结果里直接给出「AI 诊�
 
 - 页面上不存在匹配「登录按钮」的元素，可能是产品 BUG 或前置流程缺失
 - 目标元素疑似位于 iframe(id=xxx) 中，请检查 Iframe 步骤的 frame 配置
-
+![img_15.png](../../public/screenshots/ui-automation/ui-scene/img_15.png)
 ### 5.5 计划任务执行
 
 计划任务跑场景时同样会自愈，但**不推修复建议、不写回元素库**，只保证本次跑通。

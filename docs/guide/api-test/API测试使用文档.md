@@ -152,13 +152,13 @@ Body 原始 JSON 中也可直接手写 `@phone()` 等表达式。
 ### 5.1 新建
 
 API 测试页空状态（或目录树右键）选择「新建 SQL 接口」，目录树中 SQL 接口有独立图标。
-
+![img.png](../../public/screenshots/api-test/api-interfence/sql/img.png)
 > SQL 接口没有「用例列表 / 保存为用例」，只有调试。
 
 ### 5.2 数据库连接
 
 执行前需要指定数据库连接，两种来源（优先级从高到低）：
-
+![img_1.png](../../public/screenshots/api-test/api-interfence/sql/img_1.png)
 | 来源 | 配置位置 | 说明 |
 |------|---------|------|
 | 步骤级覆盖 | 接口「数据库」Tab 手动填写 | 类型/IP/端口/库名/用户名/密码，支持「测试连接」 |
@@ -171,14 +171,18 @@ API 测试页空状态（或目录树右键）选择「新建 SQL 接口」，�
 ### 5.3 编写与执行
 
 - 「SQL」Tab 编写语句，**一次只能执行一条**；检测到多条会黄色警告拦截，请拆分后逐个调试
+![img_2.png](../../public/screenshots/api-test/api-interfence/sql/img_2.png)
 - DDL 语句（建表/改表/删表/清空）会有红色警告，执行按钮标红确认
+![img_3.png](../../public/screenshots/api-test/api-interfence/sql/img_3.png)
 - 点「执行」/「保存并执行」运行，结果区展示查询结果集或影响行数
-
+![img_4.png](../../public/screenshots/api-test/api-interfence/sql/img_4.png)
 ### 5.4 提取与断言
 
 SQL 结果同样可以提取变量和断言，供场景链路使用：
 
 - **提取**：变量名 + 结果列名（列值复杂时可加 JSON 路径）+ 行下标（默认第 0 行）+ 默认值
+![img_5.png](../../public/screenshots/api-test/api-interfence/sql/img_5.png)
+![img_6.png](../../public/screenshots/api-test/api-interfence/sql/img_6.png)
 - **断言**：列名 + 断言条件 + 期望值 + 行下标
 
 ---
