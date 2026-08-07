@@ -2,14 +2,18 @@
 layout: home
 ---
 
+<script setup>
+import { withBase } from 'vitepress'
+</script>
+
 <div class="ft-hero">
 <div class="ft-hero-inner">
 <div class="ft-hero-copy">
 <h1 class="ft-hero-title ft-el" style="--i:0">接口到 UI，<br>测试全流程<span class="ft-hero-accent">一站覆盖</span></h1>
 <p class="ft-hero-lede ft-el" style="--i:1">质量管理 · 接口测试 · UI 自动化 · 团队协作 — 让测试流程标准化，让研发交付更可靠。</p>
 <div class="ft-hero-actions ft-el" style="--i:2">
-<a class="ft-btn ft-btn-lg" href="/docs/guide/what-is-fasttest">快速开始</a>
-<a class="ft-btn-ghost" href="https://www.mokatest.cn" rel="nofollow">前往体验</a>
+<a class="ft-btn ft-btn-lg" :href="withBase('/guide/what-is-fasttest')">快速开始</a>
+<a class="ft-btn-ghost" href="https://mokatest.cn" rel="nofollow">前往体验</a>
 </div>
 </div>
 <div class="ft-hero-visual">
@@ -54,7 +58,7 @@ layout: home
 <span class="ft-row-num">01</span>
 <h2>质量管理</h2>
 <p>从需求录入到 BUG 关闭，全生命周期可追溯。Epic / Story 层级规划，测试用例版本化管理，每个 BUG 都能追溯到源头，拒绝"莫名消失"。</p>
-<a class="ft-link" href="/docs/guide/qa/">进入质量管理 →</a>
+<a class="ft-link" :href="withBase('/guide/qa/')">进入质量管理 →</a>
 </div>
 <figure class="ft-row-fig">
 <img src="/illustrations/QM.png" alt="质量管理">
@@ -65,7 +69,7 @@ layout: home
 <span class="ft-row-num">02</span>
 <h2>接口测试</h2>
 <p>HTTP 接口定义、断言、提取、后置脚本一站式。参数级 Mock 让后端没开发完也能调通场景，数据模板批量生成，多套环境一键切换。</p>
-<a class="ft-link" href="/docs/guide/api-test/API测试使用文档">进入接口测试 →</a>
+<a class="ft-link" :href="withBase('/guide/api-test/API测试使用文档')">进入接口测试 →</a>
 </div>
 <figure class="ft-row-fig">
 <img src="/illustrations/API.png" alt="接口测试">
@@ -76,7 +80,7 @@ layout: home
 <span class="ft-row-num">03</span>
 <h2>UI 自动化</h2>
 <p>场景可视化编排，元素库集中管理，一处改动全局生效。测试计划定时 / 手动触发，Webhook 通知即时推送，通过率、失败项一目了然。</p>
-<a class="ft-link" href="/docs/guide/ui-automation/UI场景使用文档">进入 UI 自动化 →</a>
+<a class="ft-link" :href="withBase('/guide/ui-automation/UI场景使用文档')">进入 UI 自动化 →</a>
 </div>
 <figure class="ft-row-fig">
 <img src="/illustrations/UI.png" alt="UI 自动化">
@@ -87,7 +91,7 @@ layout: home
 <span class="ft-row-num">04</span>
 <h2>团队协作</h2>
 <p>团队、项目、成员三级权限隔离，不同项目数据互不串门。角色灵活配置，回收站机制保护数据资产，不用怕手滑清掉。</p>
-<a class="ft-link" href="/docs/guide/team-project/team">了解团队协作 →</a>
+<a class="ft-link" :href="withBase('/guide/team-project/team')">了解团队协作 →</a>
 </div>
 <figure class="ft-row-fig">
 <img src="/illustrations/Team.png" alt="团队协作">
@@ -99,7 +103,7 @@ layout: home
 <div class="ft-close-inner">
 <h2 class="ft-el" style="--i:0">把测试交给平台<br>把时间还给研发</h2>
 <p class="ft-el" style="--i:1">从第一个接口用例开始，逐步搭起你的自动化测试体系。</p>
-<a class="ft-btn ft-btn-lg ft-el" style="--i:2" href="/FastTestDoc/guide/what-is-fasttest">快速开始 →</a>
+<a class="ft-btn ft-btn-lg ft-el" style="--i:2" :href="withBase('/guide/what-is-fasttest')">快速开始 →</a>
 </div>
 </div>
 
@@ -112,22 +116,22 @@ layout: home
 </div>
 <nav class="ft-footer-col" aria-label="开始">
 <span>开始</span>
-<a href="/FastTestDoc/guide/what-is-fasttest">MokaTest 是什么</a>
-<a href="/FastTestDoc/guide/getting-started">快速开始</a>
-<a href="/FastTestDoc/guide/deploy">私有化部署</a>
+<a :href="withBase('/guide/what-is-fasttest')">MokaTest 是什么</a>
+<a :href="withBase('/guide/getting-started')">快速开始</a>
+<a :href="withBase('/guide/deploy')">私有化部署</a>
 </nav>
 <nav class="ft-footer-col" aria-label="功能">
 <span>功能</span>
-<a href="/FastTestDoc/guide/qa/">质量管理</a>
-<a href="/FastTestDoc/guide/api-test/API测试使用文档">接口测试</a>
-<a href="/FastTestDoc/guide/ui-automation/UI场景使用文档">UI 自动化</a>
-<a href="/FastTestDoc/guide/test-run/plan">测试计划</a>
+<a :href="withBase('/guide/qa/')">质量管理</a>
+<a :href="withBase('/guide/api-test/API测试使用文档')">接口测试</a>
+<a :href="withBase('/guide/ui-automation/UI场景使用文档')">UI 自动化</a>
+<a :href="withBase('/guide/test-run/plan')">测试计划</a>
 </nav>
 <nav class="ft-footer-col" aria-label="协作">
 <span>协作</span>
-<a href="/FastTestDoc/guide/team-project/team">团队管理</a>
-<a href="/FastTestDoc/guide/team-project/project">项目管理</a>
-<a href="/FastTestDoc/guide/team-project/member">成员管理</a>
+<a :href="withBase('/guide/team-project/team')">团队管理</a>
+<a :href="withBase('/guide/team-project/project')">项目管理</a>
+<a :href="withBase('/guide/team-project/member')">成员管理</a>
 </nav>
 </div>
 <div class="ft-footer-bottom">
