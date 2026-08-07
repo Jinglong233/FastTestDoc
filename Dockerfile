@@ -23,3 +23,21 @@ ENV DOCS_BASE=/docs/
 
 # 构建 VitePress
 RUN npm run build
+
+# ---- 阶段 2：运行 ----
+FROM nginx:alpine
+
+# 复制构建产物
+COPY --from=builder /app/docs/.vitepress/dist /usr/share/nginx/html
+
+# 复制 Nginx 配置
+COPY docs/nginx.conf /etc/nginx/conf.d/default.conf
+
+# 时区
+RUN apk add --no-cache tzdata && \
+    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+    echo "Asia/Shanghai" > /etc/timezone
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
