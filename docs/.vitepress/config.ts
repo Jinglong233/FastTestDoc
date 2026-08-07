@@ -5,7 +5,7 @@ export default defineConfig({
   title: 'MokaTest',
   description: 'MokaTest 质量管理 & 自动化测试平台说明文档',
   lang: 'zh-CN',
-  base: '/FastTestDoc/',
+  base: process.env.DOCS_BASE || '/MokaTestDoc/',
   lastUpdated: true,
 
   vite: {
