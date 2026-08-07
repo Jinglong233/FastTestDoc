@@ -47,6 +47,8 @@ import { withBase } from 'vitepress'
 <img class="ft-slide" src="/illustrations/API.png" alt="接口测试界面预览">
 <img class="ft-slide" src="/illustrations/UI.png" alt="UI 自动化界面预览">
 <img class="ft-slide" src="/illustrations/Team.png" alt="团队协作界面预览">
+<img class="ft-slide" src="/illustrations/Plan.png" alt="计划任务界面预览">
+<img class="ft-slide" src="/illustrations/Report.png" alt="报告界面预览">
 </div>
 <figcaption>MokaTest 平台预览</figcaption>
 </figure>
@@ -135,7 +137,7 @@ import { withBase } from 'vitepress'
 </nav>
 </div>
 <div class="ft-footer-bottom">
-<span>基于 MIT 协议发布</span>
+<span>基于 BSL 1.1 协议发布</span>
 <span>Copyright © 2026 MokaTest Team</span>
 <a href="https://github.com/Jinglong233/MokaTest" target="_blank" rel="noopener">GitHub →</a>
 </div>
