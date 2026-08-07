@@ -13,7 +13,7 @@ import { withBase } from 'vitepress'
 <p class="ft-hero-lede ft-el" style="--i:1">质量管理 · 接口测试 · UI 自动化 · 团队协作 — 让测试流程标准化，让研发交付更可靠。</p>
 <div class="ft-hero-actions ft-el" style="--i:2">
 <a class="ft-btn ft-btn-lg" :href="withBase('/guide/what-is-fasttest')">快速开始</a>
-<a class="ft-btn-ghost" href="https://mokatest.cn" rel="nofollow">前往体验</a>
+<a class="ft-btn-ghost" href="https://mokatest.cn" target="_blank" rel="noopener nofollow">前往体验</a>
 </div>
 </div>
 <div class="ft-hero-visual">
